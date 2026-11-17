@@ -10,6 +10,7 @@
 <meta property="og:image" content="https://fourballgolf.co.za/media/poster-clubs.jpg">
 <meta property="og:type" content="website">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="brand/icon-180.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap">
@@ -47,8 +48,8 @@ p{margin:0;text-wrap:pretty}
 /* header */
 .top{position:sticky;top:0;z-index:10;background:var(--navy);color:var(--on-navy);border-bottom:1px solid rgba(255,255,255,.08)}
 .top .wrap{display:flex;align-items:center;gap:24px;height:64px}
-.brand{font-family:var(--display);font-weight:800;font-size:23px;letter-spacing:-.03em;display:flex;align-items:center;gap:8px;text-decoration:none}
-.brand i{width:13px;height:13px;border-radius:3px;background:var(--green-bright);display:inline-block}
+.brand{font-family:var(--display);font-weight:800;font-size:23px;letter-spacing:-.03em;display:flex;align-items:center;gap:0;text-decoration:none}
+.brand .ball{width:.78em;height:.78em;margin:0 .02em;transform:translateY(4%);flex:none}
 .top nav{display:flex;gap:22px;margin-left:auto;font-weight:600;font-size:15px}
 .top nav a{text-decoration:none;color:var(--on-navy-muted)}
 .top nav a:hover{color:#fff}
@@ -125,7 +126,7 @@ footer .wrap{display:flex;gap:12px 28px;flex-wrap:wrap;justify-content:space-bet
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top"><i></i>Fourball</a>
+    <a class="brand" href="#top" aria-label="Fourball, back to top"><span aria-hidden="true">F</span><svg class="ball" viewBox="0 0 120 120" aria-hidden="true" focusable="false"><circle cx="60" cy="60" r="52" fill="#2FBF86"/><g fill="#0D1526"><circle cx="41" cy="28" r="3.2"/><circle cx="54" cy="28" r="3.2"/><circle cx="67" cy="28" r="3.2"/><circle cx="80" cy="28" r="3.2"/><circle cx="34" cy="41" r="3.2"/><circle cx="47" cy="41" r="3.2"/><circle cx="60" cy="41" r="3.2"/><circle cx="73" cy="41" r="3.2"/><circle cx="86" cy="41" r="3.2"/><circle cx="28" cy="54" r="3.2"/><circle cx="41" cy="54" r="3.2"/><circle cx="54" cy="54" r="3.2"/><circle cx="67" cy="54" r="3.2"/><circle cx="80" cy="54" r="3.2"/><circle cx="93" cy="54" r="3.2"/><circle cx="34" cy="67" r="3.2"/><circle cx="47" cy="67" r="3.2"/><circle cx="60" cy="67" r="3.2"/><circle cx="73" cy="67" r="3.2"/><circle cx="86" cy="67" r="3.2"/><circle cx="99" cy="67" r="3.2"/><circle cx="28" cy="80" r="3.2"/><circle cx="41" cy="80" r="3.2"/><circle cx="54" cy="80" r="3.2"/><circle cx="67" cy="80" r="3.2"/><circle cx="80" cy="80" r="3.2"/><circle cx="93" cy="80" r="3.2"/><circle cx="47" cy="93" r="3.2"/><circle cx="60" cy="93" r="3.2"/><circle cx="73" cy="93" r="3.2"/></g></svg><span aria-hidden="true">urball</span></a>
     <nav aria-label="Sections">
       <a href="#golfers">For golfers</a>
       <a href="#clubs">For clubs</a>
