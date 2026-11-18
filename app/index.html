@@ -1077,7 +1077,7 @@ document.addEventListener('click',e=>{const el=e.target.closest('[data-a]');if(!
  case'pf':S.playFilter=v;render();break;
  case'join':mJoin(v);break;
  case'dojoin':{const m=matches().find(x=>x.id===v);S.joined[v]=true;S.bookings.push({id:'j'+v,kind:'match',course:m.course,date:m.date,time:m.time,holes:18,players:1,party:['You'],paid:[false],price:m.price,cartTotal:0,payMode:'club',cur:CBY[m.course].cur});pushN('book','You joined an open game',`${CBY[m.course].name} · ${dLabel(m.date)} ${m.time}`);save();closeModal();render();toast(`You're in — ${CBY[m.course].name}, ${dLabel(m.date)} ${m.time}`);break}
- case'remind':toast('Payment reminders sent to unpaid players (demo)');break;
+ case'remind':toast('Reminders sent (demo)');break;
  case'cancel':S.confirmCancel=v;render();break;
  case'nocancel':S.confirmCancel=null;render();break;
  case'docancel':{const b=S.bookings.find(x=>x.id===v);const rtxt=b&&b.status!=='cancelled'?refundText(b):'';if(b&&b.course==='myclub'&&S.club&&b.status!=='cancelled')S.club.feed.push({t:Date.now(),text:`Cancellation: ${S.user?S.user.name:'A golfer'} cancelled ${dLabel(b.date)} ${b.time} — tee time released`});S.bookings=S.bookings.filter(x=>x.id!==v);if(b&&b.kind==='match')delete S.joined[b.id.slice(1)];S.confirmCancel=null;save();render();toast(rtxt?'Booking cancelled. '+rtxt:'Removed');break}
